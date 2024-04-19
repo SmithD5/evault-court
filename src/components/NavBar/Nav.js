@@ -10,13 +10,15 @@ const Nav = () => {
         Cookies.remove('username');
     };
 
-    const shouldShowLinks = !location.pathname.includes('/judge');
+    const judgeLinks = location.pathname.includes('/judge');
+    const fileAccessLinks = location.pathname.includes('/file-access');
+    const fileCheckLinks = location.pathname.includes('/file-check');
 
     return (
         <div>
             <li className='list'>
                 <ul className='brand_section'>
-                    <a href='/' className='nav__images'>
+                    <a href={judgeLinks ? "/dashboard/judge" : fileAccessLinks ? "/dashboard/file-access/main" : "/dashboard/file-check/main"} className='nav__images'>
                         <img src='/list.png' alt='List' className='list_img' style={{ marginLeft: '15px' }} />
                         <img src='/emblem.png' alt='' className='emblem_img' />
                         <b>e-Vault - Court</b>
@@ -25,25 +27,78 @@ const Nav = () => {
                 <ul className='options_section'>
 
                     <div className='nav__options'>
-                        {shouldShowLinks && (
-                            <a href='/case-filing/case-details' className='case__filing'>
+
+                        {judgeLinks && (
+                            <a href='/dashboard/judge/' className='dashboard'>
+                                <img src={location.pathname.includes('/dashboard') ? `/e-payment-blue.png` : `/e-payment.png`} alt='' />
+                                <p>Dashboard</p>
+                            </a>
+                        )}
+
+                        {fileAccessLinks && (
+                            <>
+                                <a href='/dashboard/file-access/assigning' className='case__filing'>
+                                    <img
+                                        src={location.pathname.includes('/assigning') ? `/case-filing-blue.png` : `/case-filing.png`}
+                                        alt=''
+                                    />
+                                    <p>Update Info</p>
+                                </a>
+
+                                <a href='/dashboard/file-access/main' className='dashboard'>
+                                    <img src={location.pathname.includes('/dashboard/file-access/main') ? `/e-payment-blue.png` : `/e-payment.png`} alt='' />
+                                    <p>Dashboard</p>
+                                </a>
+                                <a href='/dashboard/file-access/queries' className='queries'>
+                                    <img src={location.pathname.includes('/queries') ? `/queries-blue.png` : `/queries.png`} alt='' />
+                                    <p>Queries</p>
+                                </a>
+                            </>
+                        )}
+
+                        {fileCheckLinks && (
+                            <>
+                                <a href='/dashboard/file-check/update' className='case__filing'>
+                                    <img
+                                        src={location.pathname.includes('/file-check/update') ? `/case-filing-blue.png` : `/case-filing.png`}
+                                        alt=''
+                                    />
+                                    <p>Update</p>
+                                </a>
+
+                                <a href='/dashboard/file-check/main' className='dashboard'>
+                                    <img src={location.pathname.includes('/dashboard/file-check/main') ? `/e-payment-blue.png` : `/e-payment.png`} alt='' />
+                                    <p>Dashboard</p>
+                                </a>
+                                <a href='/dashboard/file-check/queries' className='queries'>
+                                    <img src={location.pathname.includes('/file-check/queries') ? `/queries-blue.png` : `/queries.png`} alt='' />
+                                    <p>Queries</p>
+                                </a>
+                            </>
+                        )}
+
+
+
+                        {/*                         
+                        {notJudgeLinks && (
+                            <a href='/dashboard/file-access/judge-assigning' className='case__filing'>
                                 <img
                                     src={location.pathname.includes('/case-filing') ? `/case-filing-blue.png` : `/case-filing.png`}
                                     alt=''
                                 />
-                                <p>Case filing</p>
+                                <p>Judge Assigning</p>
                             </a>
                         )}
-                        <a href='/dashboard/' className='dashboard'>
+                        <a href='/dashboard/file-acc/' className='dashboard'>
                             <img src={location.pathname.includes('/dashboard') ? `/e-payment-blue.png` : `/e-payment.png`} alt='' />
                             <p>Dashboard</p>
                         </a>
-                        {shouldShowLinks && (
+                        {notJudgeLinks && (
                             <a href='/queries/' className='queries'>
                                 <img src={location.pathname.includes('/queries') ? `/queries-blue.png` : `/queries.png`} alt='' />
-                                <p>Queries</p>
+                                <p>File Access</p>
                             </a>
-                        )}
+                        )} */}
                     </div>
 
                 </ul>

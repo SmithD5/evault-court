@@ -7,8 +7,8 @@ import Cookies from 'js-cookie';
 const Signin = () => {
 
     const status = true;
-    const role = "judge";
-    // const role = "fileAccess";
+    // const role = "judge";
+    const role = "fileAccess";
     // const role = "fileChecker";
 
     const [name, setName] = useState('');
@@ -58,11 +58,11 @@ const Signin = () => {
                         Cookies.set("username", data.username, { expires: 2 })
                         Cookies.set("role", data.role, { expires: 2 })
                     } else if (data.role === "fileChecker") {
-                        window.location.href = '/dashboard/file-checker';
+                        window.location.href = '/dashboard/file-checker/main';
                         Cookies.set("username", data.username, { expires: 2 })
                         Cookies.set("role", data.role, { expires: 2 })
                     } else if (data.role === "fileAccess") {
-                        window.location.href = '/dashboard/file-access';
+                        window.location.href = '/dashboard/file-access/main';
                         Cookies.set("username", data.username, { expires: 2 })
                         Cookies.set("role", data.role, { expires: 2 })
                     }

@@ -1,10 +1,11 @@
 import React from 'react';
 import "./Register.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from 'js-cookie';
 
 const Register = () => {
 
+  let location = useLocation();
   const navigate = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +22,9 @@ const Register = () => {
   };
 
   if (Cookies.get('username') != null) {
-    window.location.href = '/dashboard';
+    const judgeLinks = location.pathname.includes('/judge');
+    const fileAccessLinks = location.pathname.includes('/file-access');
+    window.location.href = judgeLinks ? "/dashboard/judge" : fileAccessLinks ? "/dashboard/file-access/main" : "/dashboard/file-check/main";
   }
 
   // Add the action which will happen after submit button is clicked, by default it routes to user dashboard 
