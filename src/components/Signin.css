@@ -1,0 +1,128 @@
+.signin{
+    display: flex;
+
+}
+.evault__banner{
+    width: 40vw;
+    height: 100vh;
+}
+.right{
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F7;
+    width: 30vw;
+    height: 8vh;
+    border-radius: 2vh;
+}
+
+.name__textbox{
+    width: 25vw;
+    height: 6vh;
+    background-color:#F5F5F7 ;
+    border: none;    
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 2vw;
+    outline: none;
+}
+
+.password{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5F5F7;
+        width: 30vw;
+        height: 8vh;
+        border-radius: 2vh;
+}
+.password__textbox{
+    width: 30vw;
+    height: 6vh;
+    margin-left: 1vw;
+    background-color:#F5F5F7 ;
+    border: none;    
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 2vw;
+    outline: none;
+}
+.grid{
+    display: grid;
+    grid-auto-rows: 12vh;
+}
+.state{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F7;
+    width: 30vw;
+    height: 8vh;
+    border-radius: 2vh;
+}
+.state__select{
+    width: 27vw;
+    height: 6vh;
+    background-color:#F5F5F7 ;
+    border: none;    
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    padding-left: 2vw;
+    outline: none;
+
+}
+.signin__p{
+    font-size: 40px;
+    font-weight: 700;
+    color:#2F3367;
+}
+select{
+    color:#696c7f;
+    appearance: none;
+}
+option{
+    color:#696c7f;
+}
+.next__button{
+    width: 7.2vw;
+    height: 5vh;
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-radius: 8px;
+    background-color: #007DFA;
+    margin-left: 1vw;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 19vw;
+    border: none;
+    color: white;
+}
+.help{
+    border-top: 1px solid #696c7f;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.forgot__password{
+    color: black;
+}
+.new__user{
+    color:#007DFA;
+}
+

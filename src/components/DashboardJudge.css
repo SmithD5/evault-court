@@ -1,0 +1,115 @@
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    height: 17vh;
+    border-bottom: 1px solid #000;
+}
+
+.draft_pleading {
+    background-color: #2A8728;
+    width: 12vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.completed_pleading {
+    background-color: #3E9374;
+    width: 12vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.objections {
+    background-color: #40cde0;
+    width: 12vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my_cases {
+    background-color: #F4BF59;
+    width: 12vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    color: white;
+}
+
+.count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15vw;
+}
+
+.count>p {
+    font-weight: 600;
+    font-size: 5vh;
+    color: white;
+}
+
+.third_part {
+    height: 60vh;
+}
+
+.third_part>p {
+    margin-left: 43vw;
+    padding-top: 5vh;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.cases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cases>p {
+    font-weight: 600;
+    font-size: 1vw;
+
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 60vw;
+    margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+#search-input {
+    margin-left: 35vw;
+    width: 20vw;
+    margin-top: 5vh;
+    border: solid black 2px;
+    background-color: rgb(226, 226, 226);
+    color: #000;
+}

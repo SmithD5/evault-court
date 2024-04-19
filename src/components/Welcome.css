@@ -1,0 +1,55 @@
+.welcome{
+    display: flex;
+
+}
+.evault__banner{
+    width: 40vw;
+    height: 100vh;
+}
+
+.welcome__buttons{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    align-items: center;
+
+}
+.welcome__p{
+    font-size: 40px;
+    font-weight: 700;
+    color:#2F3367;
+   
+}
+.button__welcome{
+    width: 7.2vw;
+    height: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 8px;
+    background-color: #007DFA;
+    margin-left: 1vw;
+    font-weight: bold;
+    font-size: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.right{
+    display: flex;
+    width: 60vw;
+    margin-bottom: 15vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 5vh;
+}
+.buttons__welcome{
+   margin-top: 7vh;
+}

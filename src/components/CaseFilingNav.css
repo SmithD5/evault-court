@@ -1,0 +1,26 @@
+.case-filing-nav{
+    display: flex;
+    margin-left: 3vw;
+    margin-top: 1vh;
+}
+.case-filing-nav>li{
+    display: flex;
+    border: 1px solid black;
+    font-weight: 500;
+    margin-left: 2vw;
+    padding: 1vh 1vw;
+    margin-bottom: 1vh;
+}
+.case-filing-nav>li:hover{
+    display: flex;
+    border: 1px solid black;
+    font-weight: 500;
+    margin-left: 2vw;
+    padding: 1vh 1vw;
+    background-color: #007DFA;
+    color: #FFF;
+}
+
+.case-filing-div{
+    border-bottom: 1px solid black;
+}

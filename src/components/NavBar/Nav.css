@@ -1,0 +1,127 @@
+.list {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ECECEE;
+    height: 17vh;
+}
+
+.nav__images {
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.nav__options {
+    display: flex;
+}
+
+.list_img {
+    height: 7vh;
+}
+
+.emblem_img {
+    height: 20vh;
+}
+
+.nav__images>b {
+    font-size: 30px;
+    color: #696c7f;
+}
+
+.nav__options>a {
+    display: flex;
+    align-items: center;
+    margin-right: 2vw;
+    justify-content: space-between;
+}
+
+.nav__options>a>p {
+    margin-left: 1vw;
+    font-weight: 600;
+    color: #696c7f;
+}
+
+.options_section {
+    display: flex;
+    align-items: center;
+}
+
+.nav__options>div>img {
+    width: 4vh;
+}
+
+.profile_section {
+    display: flex;
+    align-items: center;
+    margin-right: 8vw;
+}
+
+.profile {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #dddddd;
+    padding: 2vh 3vw;
+    align-items: center;
+    height: auto;
+}
+
+.profile:hover {
+    height: auto;
+    margin-top: 4.2vh;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.profile-content>img {
+    height: 1.5vh;
+    margin-left: 1vw;
+}
+
+.logout-section {
+    display: none;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.profile:hover .logout-section {
+    display: flex;
+    opacity: 1;
+    height: auto;
+}
+
+.logout-text {
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.logout-text:hover {
+    background-color: red;
+    color: wheat;
+}
+
+.case__filing:hover>p,
+.dashboasrd:hover>p,
+.queries:hover>p {
+    cursor: pointer;
+    color: #200E32;
+}
+
+.case__filing:hover>img {
+    content: url("/public/case-filing-blue.png");
+}
+
+.dashboard:hover>img {
+    content: url("/public/e-payment-blue.png");
+}
+
+.queries:hover>img {
+    content: url("/public/queries-blue.png");
+}
