@@ -7,8 +7,8 @@ import Cookies from 'js-cookie';
 const Signin = () => {
 
     const status = true;
-    // const role = "judge";
-    const role = "fileAccess";
+    const role = "judge";
+    // const role = "fileAccess";
     // const role = "fileChecker";
 
     const [name, setName] = useState('');

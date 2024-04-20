@@ -10,13 +10,17 @@ const DashboardJudge = () => {
     if (Cookies.get("username") == null) {
         window.location.href = "/"
     }
+    // const data = [
+    //     { caseID: "1", value1: "Data for Column 1", value2: "Data for Column 2", status: "Accepted" },
+    //     { caseID: "2", value1: "More data", value2: "Additional info", status: "Rejected" },
+    //     { caseID: "3", value1: "More data1", value2: "Additional info1", status: "Rejected" },
+    //     { caseID: "4", value1: "More data1", value2: "Additional info1", status: "Rejected" },
+    //     // ... more objects
+    // ];
+
     const data = [
-        { caseID: "1", value1: "Data for Column 1", value2: "Data for Column 2", status: "Accepted" },
-        { caseID: "2", value1: "More data", value2: "Additional info", status: "Rejected" },
-        { caseID: "3", value1: "More data1", value2: "Additional info1", status: "Rejected" },
-        { caseID: "4", value1: "More data1", value2: "Additional info1", status: "Rejected" },
-        // ... more objects
-    ];
+        { caseID: "1", lawyers: ["a", "b"], defendants: null, all_files: ["abcd"], caseId: "asddsdd", vote_id: "" }
+    ]
 
 
     const [filteredData, setFilteredData] = React.useState(data);
@@ -105,31 +109,29 @@ const DashboardJudge = () => {
 
                             </thead>
                             <tbody>
-
                                 {filteredData.map((row) => (
-                                    <React.Fragment key={row.id}>
-                                        <tr>
-                                            {Object.values(row).map((value) => (
-                                                <td key={value}>{value}</td>
-                                            ))}
-                                            <td>
-                                                <div
-                                                    className="file-view"
-                                                    style={{ backgroundColor: "lightblue", cursor: "pointer" }}
-                                                    onClick={() => {
-                                                        window.location.href = `judge/case-file/${row.caseID}`;
-                                                    }}
-                                                >
-                                                    View
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                        </tr>
-                                    </React.Fragment>
+                                    <tr key={row.caseID}>
+                                        <td>{row.caseID}</td>
+                                        <td>{Array.isArray(row.lawyers) ? row.lawyers.join(', ') : row.lawyers || 'N/A'}</td>
+                                        <td>{row.defendants || 'N/A'}</td>
+                                        <td>{Array.isArray(row.all_files) ? row.all_files.join(', ') : row.all_files || 'N/A'}</td>
+                                        <td>{row.caseId}</td>
+                                        <td>{row.vote_id}</td>
+                                        <td>
+                                            <div
+                                                className="file-view"
+                                                style={{ backgroundColor: 'lightblue', cursor: 'pointer' }}
+                                                onClick={() => {
+                                                    window.location.href = `judge/case-file/${row.caseID}`;
+                                                }}
+                                            >
+                                                View
+                                            </div>
+                                        </td>
+                                    </tr>
                                 ))}
                             </tbody>
+
                         </table>
                     ) : (
                         <>
