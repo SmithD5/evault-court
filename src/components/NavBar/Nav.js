@@ -8,6 +8,7 @@ const Nav = () => {
 
     const resetCookie = () => {
         Cookies.remove('username');
+        Cookies.remove('role');
     };
 
     const judgeLinks = location.pathname.includes('/judge');

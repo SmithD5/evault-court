@@ -15,8 +15,18 @@ const Signin = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(''); // For displaying errors
 
-    if (Cookies.get('username') != null) {
+    if (Cookies.get('role') != null) {
         window.location.href = '/dashboard';
+        if (role === "judge") {
+            window.location.href = '/dashboard/judge';
+
+        } else if (role === "fileChecker") {
+            window.location.href = '/dashboard/file-check/main';
+
+        } else if (role === "fileAccess") {
+            window.location.href = '/dashboard/file-access/main';
+
+        }
     }
 
     const handleSubmit = async (event) => {
@@ -58,7 +68,7 @@ const Signin = () => {
                         Cookies.set("username", data.username, { expires: 2 })
                         Cookies.set("role", data.role, { expires: 2 })
                     } else if (data.role === "fileChecker") {
-                        window.location.href = '/dashboard/file-checker/main';
+                        window.location.href = '/dashboard/file-check/main';
                         Cookies.set("username", data.username, { expires: 2 })
                         Cookies.set("role", data.role, { expires: 2 })
                     } else if (data.role === "fileAccess") {
